@@ -10,12 +10,16 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const theme = useThemeStore((state) => state.theme);
 
-  const logoSrc = theme === 'light' ? '/assets/logo/Logo_black.svg' : '/assets/logo/Logo.svg';
-  const loadforgeSrc = theme === 'light' ? '/assets/logo/LOADFORGE_BLACK.svg' : '/assets/logo/LOADFORGE.svg';
+  const logoSrc =
+    theme === "light" ? "/assets/logo/Logo_black.svg" : "/assets/logo/Logo.svg";
+  const loadforgeSrc =
+    theme === "light"
+      ? "/assets/logo/LOADFORGE_BLACK.svg"
+      : "/assets/logo/LOADFORGE.svg";
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) { 
+      if (window.scrollY > 50) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -32,12 +36,20 @@ export default function Header() {
   return (
     <header
       className={`${
-        isScrolled ? "bg-transparent  backdrop-blur-lg" : "bg-transparent"
-      } text-text shadow-2xl flex items-center  border-b px-5 h-20 justify-between fixed top-0 left-0 w-full z-10 `}
+        isScrolled ? "bg-transparent backdrop-blur-lg" : "bg-transparent"
+      } text-text  flex items-center border-b px-5 h-28 justify-between fixed top-0 left-0 w-full z-10 shadow-[0_4px_10px_rgba(255,255,255,0.5)]`}
     >
-      <div className=" flex items-end">
-        <img src={logoSrc} alt="Logo" className="max-h-full max-w-[90px] object-contain" />
-        <img src={loadforgeSrc} alt="Logo" className="max-h-full max-w-[100px] object-contain" />
+      <div className="flex items-end">
+        <img
+          src={logoSrc}
+          alt="Logo"
+          className="max-h-full max-w-[120px] object-contain"
+        />
+        <img
+          src={loadforgeSrc}
+          alt="Logo"
+          className="max-h-full max-w-[150px] object-contain"
+        />
       </div>
       <div>
         <BreadCrumbs />
