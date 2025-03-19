@@ -33,9 +33,9 @@ export default function Header() {
     <header
       className={`${
         isScrolled ? "bg-transparent  backdrop-blur-lg" : "bg-transparent"
-      } text-text shadow-2xl flex items-center px-5 h-24 justify-between fixed top-0 left-0 w-full z-10 `}
+      } text-text shadow-2xl flex items-center  border-b px-5 h-20 justify-between fixed top-0 left-0 w-full z-10 `}
     >
-      <div className="p-3 flex items-end">
+      <div className=" flex items-end">
         <img src={logoSrc} alt="Logo" className="max-h-full max-w-[90px] object-contain" />
         <img src={loadforgeSrc} alt="Logo" className="max-h-full max-w-[100px] object-contain" />
       </div>
@@ -43,7 +43,7 @@ export default function Header() {
         <BreadCrumbs />
       </div>
 
-      <div className="flex gap-8 pr-24">
+      <div className="flex gap-16 pr-24">
         <LanguageToogle />
         <ToggleButton />
       </div>

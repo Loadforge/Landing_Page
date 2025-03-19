@@ -1,7 +1,7 @@
 "use client";
 
 import useThemeStore from "@/store/theme.store";
-import { FaMoon } from "react-icons/fa6";
+import { IoMoonOutline } from "react-icons/io5";
 import { MdSunny } from "react-icons/md";
 
 export default function ToggleButton() {
@@ -10,9 +10,9 @@ export default function ToggleButton() {
   return (
     <a
       onClick={toggleTheme}
-      className=" bg-background text-text flex items-center gap-2 cursor-pointer "
+      className=" bg-transparent text-text flex items-center gap-2 cursor-pointer "
     >
-      {theme === "light" ? <MdSunny size={30} /> : <FaMoon size={30} />}
+      {theme === "light" ? <MdSunny size={30} /> : <IoMoonOutline  size={30} />}
     </a>
   );
 }
