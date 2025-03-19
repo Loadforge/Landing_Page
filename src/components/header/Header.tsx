@@ -33,7 +33,7 @@ export default function Header() {
     <header
       className={`${
         isScrolled ? "bg-transparent  backdrop-blur-lg" : "bg-transparent"
-      } text-text shadow-2xl flex items-center px-5 h-24 justify-between sticky top-0 left-0 w-full z-10`}
+      } text-text shadow-2xl flex items-center px-5 h-24 justify-between fixed top-0 left-0 w-full z-10 `}
     >
       <div className="p-3 flex items-end">
         <img src={logoSrc} alt="Logo" className="max-h-full max-w-[90px] object-contain" />
