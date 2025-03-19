@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import useThemeStore from "@/store/theme.store";
 import { useEffect } from "react";
-import ToogleButton from "@/components/ToogleButton";
+import Header from "@/components/header/Header";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -24,7 +24,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased min-h-screen h-[620vh]`}>
-        <ToogleButton></ToogleButton>
+        <Header/>
         {children}
       </body>
     </html>
