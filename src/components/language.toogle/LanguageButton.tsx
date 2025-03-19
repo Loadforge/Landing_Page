@@ -23,22 +23,22 @@ export default function LanguageToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <button className="bg-transparent text-text border border-primary  p-2 rounded-lg gap-2 flex items-center">
-          <MdLanguage className="text-text text-3xl" />
-          <p className="font-bold text-l">{languageLabels[language]}</p>
-          <IoIosArrowDown  className="text-text text-xl " />
+        <button className="bg-transparent text-text border border-primary  p-4 rounded-lg gap-4 flex items-center">
+          <MdLanguage className="text-text text-4xl" />
+          <p className="font-bold text-xl">{languageLabels[language]}</p>
+          <IoIosArrowDown  className="text-text text-2xl " />
         </button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56 bg-text text-textDark bg-background">
+      <DropdownMenuContent className="w-80 bg-text  bg-background">
         <DropdownMenuLabel className="text-text">
-          Selecione o idioma
+          Select a language
         </DropdownMenuLabel>
         <DropdownMenuSeparator className="bg-primary" />
         <DropdownMenuRadioGroup value={language} onValueChange={setLanguage}>
-          <DropdownMenuRadioItem value="pt" className="hover:bg-background">
+          <DropdownMenuRadioItem value="pt" >
             Português
           </DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="en" className="hover:bg-background">
+          <DropdownMenuRadioItem value="en" >
             English
           </DropdownMenuRadioItem>
         </DropdownMenuRadioGroup>
