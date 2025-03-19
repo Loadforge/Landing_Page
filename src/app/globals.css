@@ -11,7 +11,8 @@ html {
 
 @layer base {
   :root {
-    --background: #FFFFFF; 
+    --background: #F8F9FA; 
+    --background_home: #F8F9FA; 
     --background_secondary: #33363A; 
     --separators: #545555; 
     --text: #1E1E1E;
@@ -51,6 +52,7 @@ html {
 
   .dark {
     --background: #1E1E1E; 
+    --background_home: #000; 
     --background_secondary: #33363A; 
     --separators: #545555; 
     --text: #D5E0E0;
