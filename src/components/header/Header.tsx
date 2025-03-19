@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import LanguageToogle from "../language.toogle/LanguageButton";
 import ToggleButton from "../theme.toogle/ToogleButton";
+import BreadCrumbs from "../breadCrumbs/BreadCrumbs";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,6 +33,9 @@ export default function Header() {
       <div className="p-3 flex items-end">
         <img src="/assets/logo/Logo.svg" alt="Logo" className="max-h-full max-w-[90px] object-contain" />
         <img src="/assets/logo/LOADFORGE.svg" alt="Logo" className="max-h-full max-w-[100px] object-contain" />
+      </div>
+      <div>
+        <BreadCrumbs/>
       </div>
 
       <div className="flex gap-8 pr-24">

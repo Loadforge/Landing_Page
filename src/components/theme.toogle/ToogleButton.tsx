@@ -12,7 +12,7 @@ export default function ToggleButton() {
       onClick={toggleTheme}
       className=" bg-background text-text flex items-center gap-2 cursor-pointer "
     >
-      {theme === "light" ? <FaMoon size={30} /> : <MdSunny size={30} />}
+      {theme === "light" ? <MdSunny size={30} /> : <FaMoon size={30} />}
     </a>
   );
 }
