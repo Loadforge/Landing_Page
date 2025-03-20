@@ -16,27 +16,27 @@ export default function LanguageToggle() {
   const [language, setLanguage] = useState("pt");
 
   const languageLabels: Record<string, string> = {
-    pt: "Português",
+    pt: "Portuguese",
     en: "English",
   };
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <button className="bg-transparent text-text border border-primary  p-4 rounded-lg gap-4 flex items-center">
-          <MdLanguage className="text-text text-4xl" />
-          <p className="font-bold text-xl">{languageLabels[language]}</p>
-          <IoIosArrowDown  className="text-text text-2xl " />
+        <button className="bg-transparent text-text border border-primary  p-2 rounded-lg gap-2 flex items-center opacity-50">
+          <MdLanguage className="text-text text-xl" />
+          <p className="font-bold text-sm">{languageLabels[language]}</p>
+          <IoIosArrowDown  className="text-text text-sm " />
         </button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-80 bg-text  bg-background">
+      <DropdownMenuContent className="w-56 bg-text  bg-background">
         <DropdownMenuLabel className="text-text">
           Select a language
         </DropdownMenuLabel>
         <DropdownMenuSeparator className="bg-primary" />
         <DropdownMenuRadioGroup value={language} onValueChange={setLanguage}>
           <DropdownMenuRadioItem value="pt" >
-            Português
+            Portuguese
           </DropdownMenuRadioItem>
           <DropdownMenuRadioItem value="en" >
             English
