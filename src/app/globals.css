@@ -99,3 +99,41 @@ html {
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes gradientRotation {
+  0% {
+    background-size: 400% 400%;
+    background-position: 0% 50%;
+  }
+  50% {
+    background-size: 400% 400%;
+    background-position: 100% 50%;
+  }
+  100% {
+    background-size: 400% 400%;
+    background-position: 0% 50%;
+  }
+}
+
+.hover\:animate-gradient:hover {
+  animation: gradientRotation 5s ease infinite;
+  background: linear-gradient(45deg, #FF4400, #1F3FDC, #FF4400, #1F3FDC);
+}
+
+@keyframes gradientRotationText {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-image: linear-gradient(45deg, #FF4400, #1F3FDC, #FF4400, #1F3FDC); 
+  background-size: 400% 400%;
+  animation: gradientRotationText 10s ease infinite;
+}
