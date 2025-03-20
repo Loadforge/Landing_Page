@@ -11,6 +11,7 @@ export default {
     extend: {
       colors: {
         background: 'var(--background)',
+        subtitle: 'var(--separators)',
         home: 'var(--background_home)',
         foreground: 'var(--foreground)',
         card: {

@@ -2,7 +2,7 @@ import { Breadcrumb, BreadcrumbItem, BreadcrumbLink } from "../ui/breadcrumb";
 import { FaExternalLinkAlt } from "react-icons/fa"; 
 export default function BreadCrumbs() {
   return (
-    <Breadcrumb className="flex w-full justify-between text-2xl  text-text space-x-20 ">
+    <Breadcrumb className="flex w-full justify-between text-sm  text-text space-x-10 ">
       <BreadcrumbItem>
         <BreadcrumbLink href="#home">Home</BreadcrumbLink>
       </BreadcrumbItem>
