@@ -1,4 +1,4 @@
-import ThreeScene from "../ThreeScene";
+import ThreeScene from "../bigorn_3D/ThreeScene";
 
 export default function Home() {
   return (
