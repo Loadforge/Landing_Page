@@ -37,7 +37,7 @@ export default function Header() {
     <header
       className={`${
         isScrolled ? "bg-transparent backdrop-blur-lg" : "bg-transparent"
-      } text-text  flex items-center border-b px-5 h-16 justify-between fixed top-0 left-0 w-full z-10 shadow-[0_4px_10px_rgba(255,255,255,0.5)]`}
+      } text-text flex items-center px-5 h-16 justify-between fixed top-0 left-0 w-full z-10 shadow-[0_4px_10px_var(--separators)]`}
     >
       <div className="flex items-end">
         <img

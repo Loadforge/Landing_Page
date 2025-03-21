@@ -12,7 +12,7 @@ html {
 @layer base {
   :root {
     --background: #F8F9FA; 
-    --background_home: #F8F9FA; 
+    --background_home: #D5E0E0; 
     --background_secondary: #33363A; 
     --separators: #545555; 
     --text: #1E1E1E;
@@ -100,25 +100,7 @@ html {
   }
 }
 
-@keyframes gradientRotation {
-  0% {
-    background-size: 400% 400%;
-    background-position: 0% 50%;
-  }
-  50% {
-    background-size: 400% 400%;
-    background-position: 100% 50%;
-  }
-  100% {
-    background-size: 400% 400%;
-    background-position: 0% 50%;
-  }
-}
 
-.hover\:animate-gradient:hover {
-  animation: gradientRotation 5s ease infinite;
-  background: linear-gradient(45deg, #FF4400, #F0C52E, #FF4400, #F0C52E);
-}
 
 @keyframes gradientRotationText {
   0% {

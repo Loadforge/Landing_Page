@@ -5,7 +5,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 const ThreeScene = () => {
   const canvasRef = useRef(null);
-  const modelRef = useRef<THREE.Object3D | null>(null); // Referência ao modelo
+  const modelRef = useRef<THREE.Object3D | null>(null); 
 
   useEffect(() => {
     const scene = new THREE.Scene();
@@ -30,12 +30,12 @@ const ThreeScene = () => {
     scene.add(directionalLight);
 
     const loader = new GLTFLoader();
-    loader.load('/anvil_-_bigorna (1).glb', (gltf) => {
+    loader.load('./anvil_-_bigorna (1).glb', (gltf) => {
       const model = gltf.scene;
       model.scale.set(5, 5, 5);
       model.position.set(0, 0, 0);
       scene.add(model);
-      modelRef.current = model; // Armazena a referência do modelo
+      modelRef.current = model;
     }, undefined, (error) => {
       console.error('Error loading GLB model:', error);
     });
@@ -47,9 +47,9 @@ const ThreeScene = () => {
     const animate = () => {
       requestAnimationFrame(animate);
 
-      // Faz o modelo girar suavemente no eixo Y
+      
       if (modelRef.current) {
-        modelRef.current.rotation.y += 0.01; // Ajuste a velocidade da rotação aqui
+        modelRef.current.rotation.y -= 0.01; 
       }
 
       controls.update();
