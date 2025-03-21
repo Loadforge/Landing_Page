@@ -1,50 +1,57 @@
-// components/ThreeScene.js
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
 const ThreeScene = () => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
- 
     const scene = new THREE.Scene();
 
-  
     const aspectRatio = 1;
-    
-    
     const camera = new THREE.PerspectiveCamera(75, aspectRatio, 0.1, 1000);
+    camera.position.set(0, 2, 5);
 
-  
-    const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current, alpha: true });
-    renderer.setSize(300, 300); 
+    const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current, antialias: true, alpha: true });
+    renderer.setSize(500, 500);
     renderer.setClearColor(0x000000, 0);
 
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    scene.add(ambientLight);
 
-    camera.position.z = 2;
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+    directionalLight.position.set(5, 5, 5);
+    scene.add(directionalLight);
 
-    const geometry = new THREE.BoxGeometry();
-    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-    const cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
+    const loader = new GLTFLoader();
+    loader.load('/anvil_-_bigorna (1).glb', (gltf) => {
+      const model = gltf.scene;
+      model.scale.set(5, 5, 5);
+      scene.add(model);
+    }, undefined, (error) => {
+      console.error('Error loading GLB model:', error);
+    });
 
-    
-    const animate = function () {
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.enableZoom = false;
+
+    const animate = () => {
+      
       requestAnimationFrame(animate);
-      cube.rotation.x += 0.01;
-      cube.rotation.y += 0.01;
+      controls.update();
       renderer.render(scene, camera);
     };
 
     animate();
 
-   
     return () => {
       renderer.dispose();
     };
   }, []);
 
-  return <canvas ref={canvasRef} style={{ maxWidth: '300px', maxHeight: '300px', width: '100%', height: '100%' }} />;
+  return <canvas ref={canvasRef} style={{ maxWidth: '500px', maxHeight: '500px', width: '100%', height: '100%' }} />;
 };
 
 export default ThreeScene;
