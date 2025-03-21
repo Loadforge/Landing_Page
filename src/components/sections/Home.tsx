@@ -3,7 +3,7 @@ import ThreeScene from "../bigorn_3D/ThreeScene";
 export default function Home() {
   return (
     <div id="home" className="h-screen bg-home">
-      <div className="h-screen bg-[url('./assets/background/background.svg')] bg-cover bg-center flex items-center justify-between p-20">
+      <div className="h-screen bg-[url('/assets/background/background.svg')] bg-cover bg-center flex items-center justify-between p-20">
         <div className="text-text w-6/10 flex flex-col gap-10">
           <div>
             <h1 className="text-5xl font-bold leading-tight">
