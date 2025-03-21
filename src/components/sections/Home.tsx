@@ -3,8 +3,14 @@ import ThreeScene from "../ThreeScene";
 export default function Home() {
   return (
     <div id="home" className="h-screen bg-home">
+
+      <div className="h-screen bg-[url('/assets/background/background.svg')] bg-cover bg-center flex items-center  justify-between p-20">
+        <div className="text-text w-6/10 flex flex-col gap-10  ">
+
+
       <div className="h-screen bg-[url('/assets/background/background.svg')] bg-cover bg-center flex items-center justify-between p-20">
         <div className="text-text w-6/10 flex flex-col gap-10  ">
+ main
           <div>
             <h1 className="text-5xl font-bold leading-tight">
               Effortless{" "}
@@ -26,8 +32,14 @@ export default function Home() {
           </button>
         </div>
 
+
+        <div className="w-4/10 justify-center mt-32 ">
+          <ThreeScene />
+
+
         <div className="w-4/10 justify-center  mr-[10rem]">
           <ThreeScene />
+main
         </div>
       </div>
     </div>
