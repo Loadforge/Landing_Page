@@ -1,10 +1,11 @@
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 const ThreeScene = () => {
   const canvasRef = useRef(null);
+  const modelRef = useRef<THREE.Object3D | null>(null); // Referência ao modelo
 
   useEffect(() => {
     const scene = new THREE.Scene();
@@ -13,6 +14,10 @@ const ThreeScene = () => {
     const camera = new THREE.PerspectiveCamera(75, aspectRatio, 0.1, 1000);
     camera.position.set(0, 2, 5);
 
+    if (!canvasRef.current) {
+      console.error('Canvas element is not available.');
+      return;
+    }
     const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current, antialias: true, alpha: true });
     renderer.setSize(500, 500);
     renderer.setClearColor(0x000000, 0);
@@ -28,7 +33,9 @@ const ThreeScene = () => {
     loader.load('/anvil_-_bigorna (1).glb', (gltf) => {
       const model = gltf.scene;
       model.scale.set(5, 5, 5);
+      model.position.set(0, 0, 0);
       scene.add(model);
+      modelRef.current = model; // Armazena a referência do modelo
     }, undefined, (error) => {
       console.error('Error loading GLB model:', error);
     });
@@ -38,8 +45,13 @@ const ThreeScene = () => {
     controls.enableZoom = false;
 
     const animate = () => {
-      
       requestAnimationFrame(animate);
+
+      // Faz o modelo girar suavemente no eixo Y
+      if (modelRef.current) {
+        modelRef.current.rotation.y += 0.01; // Ajuste a velocidade da rotação aqui
+      }
+
       controls.update();
       renderer.render(scene, camera);
     };

@@ -117,7 +117,7 @@ html {
 
 .hover\:animate-gradient:hover {
   animation: gradientRotation 5s ease infinite;
-  background: linear-gradient(45deg, #FF4400, #1F3FDC, #FF4400, #1F3FDC);
+  background: linear-gradient(45deg, #FF4400, #F0C52E, #FF4400, #F0C52E);
 }
 
 @keyframes gradientRotationText {
