@@ -26,7 +26,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <link rel="icon" href="/favicon.ico" sizes="any" />
  
       </head>
-      <body className={`${inter.variable} antialiased min-h-screen overflow-y-hidden h-[100vh]`}>
+      <body className={`${inter.variable} antialiased min-h-screen  h-[100vh]`}>
         <Header />
         {children}
       </body>
