@@ -11,11 +11,11 @@ export default function Header() {
   const theme = useThemeStore((state) => state.theme);
 
   const logoSrc =
-    theme === "light" ? "/Logo_black.svg" : "/Logo.svg";
+    theme === "light" ? "./Logo_black.svg" : "./Logo.svg";
   const loadforgeSrc =
     theme === "light"
-      ? "/LOADFORGE_BLACK.svg"
-      : "/LOADFORGE.svg";
+      ? "./LOADFORGE_BLACK.svg"
+      : "./LOADFORGE.svg";
 
   useEffect(() => {
     const handleScroll = () => {
