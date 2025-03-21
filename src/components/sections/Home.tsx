@@ -21,9 +21,9 @@ export default function Home() {
               top performance.
             </p>
           </div>
-          <button className="w-1/3 text-white text-2xl font-bold p-4 rounded-xl bg-gradient-to-b from-primary to-[#F0C52E] transition-all duration-500 ease-in-out hover:shadow-lg hover:animate-gradient">
+            <button className="w-1/3 text-white text-2xl font-bold p-4 rounded-xl bg-gradient-to-b from-primary to-[#F0C52E] transition-all duration-500 ease-in-out transform hover:scale-105 hover:shadow-lg animate-gradient">
             Get Started
-          </button>
+            </button>
         </div>
 
         <div className="w-4/10 flex justify-center mt-32">
