@@ -32,7 +32,7 @@ const ThreeScene = () => {
     const loader = new GLTFLoader();
     loader.load('./anvil_-_bigorna (1).glb', (gltf) => {
       const model = gltf.scene;
-      model.scale.set(5, 5, 5);
+      model.scale.set(4, 4, 4);
       model.position.set(0, 0, 0);
       scene.add(model);
       modelRef.current = model;
