@@ -2,9 +2,18 @@ import ThreeScene from "../bigorn_3D/ThreeScene";
 
 export default function Home() {
   return (
-    <div id="home" className="h-screen bg-home">
-      <div className="h-screen bg-[url('/background.svg')] bg-cover bg-center flex items-center justify-between p-20">
-        <div className="text-text w-6/10 flex flex-col gap-10">
+    <div id="home" className="h-screen relative">
+      <div className="absolute inset-0 -z-10 bg-home">
+        <img
+          src="./background.svg"
+          alt="Background"
+          className="w-full h-full object-cover"
+          draggable="false"
+        />
+      </div>
+
+      <div className="h-screen flex items-center justify-between p-20 relative">
+        <div className="text-text w-3/5 flex flex-col gap-10">
           <div>
             <h1 className="text-5xl font-bold leading-tight">
               Effortless{" "}
@@ -21,12 +30,12 @@ export default function Home() {
               top performance.
             </p>
           </div>
-            <button className="w-1/3 text-white text-2xl font-bold p-4 rounded-xl bg-gradient-to-b from-primary to-[#F0C52E] transition-all duration-500 ease-in-out transform hover:scale-105 hover:shadow-lg animate-gradient">
+          <button className="w-2/6 text-white text-2xl font-bold p-4 rounded-xl bg-gradient-to-b from-primary to-[#F0C52E] transition-transform duration-500 ease-in-out transform hover:scale-105 hover:shadow-lg animate-gradient">
             Get Started
-            </button>
+          </button>
         </div>
 
-        <div className="w-4/10 flex justify-center mt-32">
+        <div className="w-2/5 flex justify-center mt-32">
           <ThreeScene />
         </div>
       </div>

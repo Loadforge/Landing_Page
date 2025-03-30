@@ -91,7 +91,7 @@ html {
   }
 }
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
   transition: 5s;
 }
 ::-webkit-scrollbar-thumb:hover {
