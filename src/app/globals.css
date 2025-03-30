@@ -90,6 +90,17 @@ html {
     --sidebar-ring: #FF4400;
   }
 }
+::-webkit-scrollbar {
+  width: 10px;
+  transition: 5s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #FF4400;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #FF4400;
+  transition: 5s;
+}
 
 @layer base {
   * {
