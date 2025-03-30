@@ -56,7 +56,7 @@ export default function Header() {
       </div>
 
       <div className="flex gap-8 pr-10">
-        <LanguageToogle />
+        {/* <LanguageToogle /> TODO */}
         <ToggleButton />
       </div>
     </header>
