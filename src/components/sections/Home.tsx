@@ -1,4 +1,9 @@
+import { ExternalService } from "@/services";
 import ThreeScene from "../bigorn_3D/ThreeScene";
+
+const handleRedirect = () => {
+  ExternalService.redirectToExternal();
+};
 
 export default function Home() {
   return (
@@ -30,7 +35,7 @@ export default function Home() {
               top performance.
             </p>
           </div>
-          <button className="w-2/6 text-white text-2xl font-bold p-4 rounded-xl bg-gradient-to-b from-primary to-[#F0C52E] transition-transform duration-500 ease-in-out transform hover:scale-105 hover:shadow-lg animate-gradient">
+          <button onClick={handleRedirect} className="w-2/6 text-white text-2xl font-bold p-4 rounded-xl bg-gradient-to-b from-primary to-[#F0C52E] transition-transform duration-500 ease-in-out transform hover:scale-105 hover:shadow-lg animate-gradient">
             Get Started
           </button>
         </div>
