@@ -12,7 +12,7 @@ const ThreeScene = () => {
 
     const aspectRatio = 1;
     const camera = new THREE.PerspectiveCamera(75, aspectRatio, 0.1, 1000);
-    camera.position.set(0, 2, 5);
+    camera.position.set(0, 2, 4);
 
     if (!canvasRef.current) {
       console.error('Canvas element is not available.');
@@ -49,7 +49,7 @@ const ThreeScene = () => {
 
       
       if (modelRef.current) {
-        modelRef.current.rotation.y -= 0.01; 
+        modelRef.current.rotation.y -= 0.005; 
       }
 
       controls.update();
