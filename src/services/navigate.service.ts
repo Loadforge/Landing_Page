@@ -1,4 +1,4 @@
-const EXTERNAL_URL = process.env.NEXT_PUBLIC_EXTERNAL_URL || "http://localhost:5173";
+const EXTERNAL_URL = process.env.NEXT_PUBLIC_EXTERNAL_URL || "https://loadforge.github.io/SITE/";
 
 export class ExternalService {
 
