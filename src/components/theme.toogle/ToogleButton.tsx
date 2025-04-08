@@ -12,7 +12,7 @@ export default function ToggleButton() {
       onClick={toggleTheme}
       className=" bg-transparent text-text flex items-center gap-2 cursor-pointer "
     >
-      {theme === "light" ? <MdSunny size={20} /> : <IoMoonOutline  size={20} />}
+      {theme === "dark" ? <MdSunny size={20} /> : <IoMoonOutline  size={20} />}
     </a>
   );
 }
