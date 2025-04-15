@@ -25,7 +25,6 @@ jobs:
       - name: Build project
         run: |
           npm run build
-          npm run export
 
       - name: Deploy to HostGator via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
