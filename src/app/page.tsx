@@ -1,12 +1,10 @@
 "use client";
 
+import I18nProvider from "@/components/i18nProvider";
+import Home from "@/components/sections/Home";
+import useThemeStore from "@/store/theme.store";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import Home from "@/components/sections/Home";
-import Functions from "@/components/sections/Functions";
-import Tecnologies from "@/components/sections/Tecnologies";
-import About from "@/components/sections/About";
-import useThemeStore from "@/store/theme.store";
 
 export default function Page() {
   const { t } = useTranslation();
@@ -48,10 +46,10 @@ export default function Page() {
 
   return (
     <div className="flex flex-col">
-      <Home />
-      <Functions />
-      <Tecnologies />
-      <About />
+      <I18nProvider>
+        {" "}
+        <Home />
+      </I18nProvider>
     </div>
   );
 }
