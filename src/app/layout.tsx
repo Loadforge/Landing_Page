@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/Header";
 import { Metadata } from "next";
+import I18nProvider from "@/components/i18nProvider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -24,11 +25,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
- 
       </head>
-      <body className={`${inter.variable} antialiased min-h-screen  h-[420vh]`}>
-        <Header />
-        {children}
+      <body className={`${inter.variable} antialiased min-h-screen h-[420vh]`}>
+        <I18nProvider>
+          <Header />
+          {children}
+        </I18nProvider>
       </body>
     </html>
   );

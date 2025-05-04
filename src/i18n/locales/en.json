@@ -1,0 +1,21 @@
+{
+  "mobile": {
+    "title": "Please use a computer",
+    "description": "This application was designed for larger screens and is not compatible with mobile devices.",
+    "why": "Why only computers?",
+    "reasons": {
+      "interface": "Complex interface, ideal for large screens",
+      "features": "Advanced features that don't work well on mobile",
+      "experience": "Ensure the best experience with mouse and keyboard"
+    }
+  },
+  "home": {
+    "title": {
+      "before": "Effortless",
+      "highlight": "API Testing",
+      "after": "for Developers and Teams"
+    },
+    "description": "Accelerate your development process with our powerful API testing platform. Designed for efficiency, LoadForge simplifies testing, debugging, and optimizing APIs, ensuring seamless integration and top performance.",
+    "button": "Get Started"
+  }
+}
