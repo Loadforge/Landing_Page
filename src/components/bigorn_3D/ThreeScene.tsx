@@ -1,11 +1,11 @@
-import { useEffect, useRef, useState } from "react";
-import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { useEffect, useRef, useState } from 'react';
+import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 const ThreeScene = () => {
   const canvasRef = useRef(null);
-  const modelRef = useRef<THREE.Object3D | null>(null);
+  const modelRef = useRef<THREE.Object3D | null>(null); 
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -16,15 +16,11 @@ const ThreeScene = () => {
     camera.position.set(0, 2, 4);
 
     if (!canvasRef.current) {
-      console.error("Canvas element is not available.");
+      console.error('Canvas element is not available.');
       return;
     }
 
-    const renderer = new THREE.WebGLRenderer({
-      canvas: canvasRef.current,
-      antialias: true,
-      alpha: true,
-    });
+    const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current, antialias: true, alpha: true });
     renderer.setSize(500, 500);
     renderer.setClearColor(0x000000, 0);
 
@@ -37,7 +33,7 @@ const ThreeScene = () => {
 
     const loader = new GLTFLoader();
     loader.load(
-      "./anvil_-_bigorna (1).glb",
+      './anvil_-_bigorna (1).glb',
       (gltf) => {
         const model = gltf.scene;
         model.scale.set(4, 4, 4);
@@ -48,8 +44,8 @@ const ThreeScene = () => {
       },
       undefined,
       (error) => {
-        console.error("Error loading GLB model:", error);
-        setLoading(false);
+        console.error('Error loading GLB model:', error);
+        setLoading(false); 
       }
     );
 
@@ -78,18 +74,17 @@ const ThreeScene = () => {
   return (
     <div className="relative w-[500px] h-[500px]">
       {loading && (
-        <img
-          src="/Component 5.svg"
-          alt="Carregando modelo 3D"
-          className=" z-10"
-        />
+       <img
+       src="/Component 5.svg"
+       alt="Carregando modelo 3D"
+       className="absolute inset-0 w-full h-full object-contain z-10"
+     />
+     
       )}
       <canvas
         ref={canvasRef}
-        style={{ width: "100%", height: "100%" }}
-        className={
-          loading ? "opacity-0" : "opacity-100 transition-opacity duration-300"
-        }
+        style={{ width: '100%', height: '100%' }}
+        className={loading ? 'opacity-0' : 'opacity-100 transition-opacity duration-300'}
       />
     </div>
   );
