@@ -18,18 +18,19 @@ export default function LanguageToggle() {
   const { i18n } = useTranslation();
 
   const [isClient, setIsClient] = useState(false);
-
-  const [language, setLanguage] = useState<string>("pt");
+  const [language, setLanguage] = useState<string>("pt-BR");
 
   useEffect(() => {
     setIsClient(true);
 
     const savedLanguage =
       typeof window !== "undefined" ? localStorage.getItem("language") : null;
+
     if (savedLanguage) {
       setLanguage(savedLanguage);
     } else {
-      setLanguage(i18n.language || "pt");
+      const initialLang = i18n.language || "pt-BR";
+      setLanguage(initialLang);
     }
   }, [i18n.language]);
 
@@ -41,8 +42,8 @@ export default function LanguageToggle() {
   }, [language, i18n, isClient]);
 
   const languageLabels: Record<string, string> = {
-    pt: "Português(BR)",
-    en: "English",
+    "pt-BR": "Português (BR)",
+    "en-US": "English (US)",
   };
 
   return (
@@ -63,10 +64,12 @@ export default function LanguageToggle() {
           value={language}
           onValueChange={(value: string) => setLanguage(value)}
         >
-          <DropdownMenuRadioItem value="pt">
-            Português(BR)
+          <DropdownMenuRadioItem value="pt-BR">
+            Português (BR)
           </DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="en">English</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="en-US">
+            English (US)
+          </DropdownMenuRadioItem>
         </DropdownMenuRadioGroup>
       </DropdownMenuContent>
     </DropdownMenu>
