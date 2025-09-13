@@ -11,12 +11,9 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const theme = useThemeStore((state) => state.theme);
 
-  const logoSrc =
-    theme === "light" ? "/Logo_black.svg" : "/Logo.svg";
+  const logoSrc = theme === "light" ? "/Logo_black.svg" : "/Logo.svg";
   const loadforgeSrc =
-    theme === "light"
-      ? "/LOADFORGE_BLACK.svg"
-      : "/LOADFORGE.svg";
+    theme === "light" ? "/LOADFORGE_BLACK.svg" : "/LOADFORGE.svg";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -69,7 +66,7 @@ export default function Header() {
         >
           <FaGithub className="h-4 w-4" />
         </a>
-        <LanguageToogle /> 
+        <LanguageToogle />
         <ToggleButton />
       </div>
     </header>
