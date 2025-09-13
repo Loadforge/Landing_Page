@@ -12,7 +12,7 @@ export default function Footer() {
         </p>
         <div className="flex items-center gap-4">
           <a
-            href="https://github.com/Loadforge/Landing_Page"
+            href="https://github.com/Loadforge"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-md border border-[var(--separators)]/30 px-3 py-1.5 text-sm hover:text-white hover:bg-white/10 transition-colors"

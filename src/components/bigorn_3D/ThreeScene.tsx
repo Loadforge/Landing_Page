@@ -28,7 +28,7 @@ const ThreeScene = () => {
       const width = containerRef.current.clientWidth || 500;
       const height = containerRef.current.clientHeight || 500;
       camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 1000);
-      camera.position.set(0, 2, 4);
+      camera.position.set(0, 2, 5);
 
       renderer = new THREE.WebGLRenderer({
         canvas: canvasRef.current,
@@ -89,13 +89,11 @@ const ThreeScene = () => {
       };
       animate();
 
-      // Cleanup on unmount
       return () => {
         window.removeEventListener('resize', onResize);
       };
     };
 
-    // Defer initialization until visible to the user
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {

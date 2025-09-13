@@ -57,7 +57,7 @@ export default function Header() {
 
       <div className="flex items-center gap-4 pr-5">
         <a
-          href="https://github.com/Loadforge/Landing_Page"
+          href="https://github.com/Loadforge"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center justify-center rounded-md border border-[var(--separators)]/30 p-2 text-text hover:bg-card/60 transition-colors"

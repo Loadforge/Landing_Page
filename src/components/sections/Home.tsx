@@ -1,11 +1,15 @@
 import { ExternalService } from "@/services";
 import { useTranslation } from "react-i18next";
 import dynamic from "next/dynamic";
+import { FaGithub } from "react-icons/fa";
 
 const ThreeScene = dynamic(() => import("../bigorn_3D/ThreeScene"), {
   ssr: false,
   loading: () => (
-    <div className="w-full h-full animate-pulse bg-muted/30 rounded-xl" aria-label="Carregando cena 3D" />
+    <div
+      className="w-full h-full animate-pulse bg-muted/30 rounded-xl"
+      aria-label="Carregando cena 3D"
+    />
   ),
 });
 
@@ -18,14 +22,17 @@ export default function Home() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center">
-      {/* Subtle gradient background overlay */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[var(--background_home)]/60 via-transparent to-[var(--background)]" />
-      {/* Optional texture image */}
       <div className="absolute inset-0 -z-20 opacity-20 pointer-events-none select-none">
-        <img src="/background.svg" alt="" className="w-full h-full object-cover" draggable="false" />
+        <img
+          src="/background.svg"
+          alt=""
+          className="w-full h-full object-cover"
+          draggable="false"
+        />
       </div>
 
-      <div className="relative w-full pt-16">{/* offset for fixed header */}
+      <div className="relative w-full ">
         <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center py-12 lg:py-24">
             <div className="lg:col-span-7 text-text">
@@ -37,8 +44,7 @@ export default function Home() {
                 {t("home.title.before")}
                 <span className="bg-clip-text text-transparent animate-gradient px-2">
                   {t("home.title.highlight")}
-                </span>
-                {" "}
+                </span>{" "}
                 {t("home.title.after")}
               </h1>
               <p className="mt-4 md:mt-6 text-base md:text-lg text-muted-foreground max-w-2xl">
@@ -51,18 +57,14 @@ export default function Home() {
                 >
                   {t("home.button")}
                 </button>
+
                 <a
-                  href="#functions"
-                  className="inline-flex items-center justify-center rounded-lg border border-[var(--separators)]/30 px-6 py-3 text-text hover:bg-card/60 transition-colors"
-                >
-                  {t("home.viewFunctions")}
-                </a>
-                <a
-                  href="https://github.com/Loadforge/Landing_Page"
+                  href="https://github.com/Loadforge"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-lg border border-[var(--separators)]/30 px-6 py-3 text-text hover:bg-card/60 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-[var(--separators)]/30 px-6 py-3 text-text hover:bg-card/60 transition-colors"
                 >
+                  <FaGithub className="h-4 w-4" />
                   {t("buttons.github")}
                 </a>
               </div>
