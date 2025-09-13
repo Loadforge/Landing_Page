@@ -4,75 +4,132 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 const ThreeScene = () => {
-  const canvasRef = useRef(null);
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const modelRef = useRef<THREE.Object3D | null>(null); 
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const scene = new THREE.Scene();
+    if (!canvasRef.current || !containerRef.current) return;
 
-    const aspectRatio = 1;
-    const camera = new THREE.PerspectiveCamera(75, aspectRatio, 0.1, 1000);
-    camera.position.set(0, 2, 4);
+    let renderer: THREE.WebGLRenderer | null = null;
+    let scene: THREE.Scene | null = null;
+    let camera: THREE.PerspectiveCamera | null = null;
+    let controls: OrbitControls | null = null;
+    let frameId: number | null = null;
+    let inited = false;
 
-    if (!canvasRef.current) {
-      console.error('Canvas element is not available.');
-      return;
-    }
+    const init = () => {
+      if (inited || !canvasRef.current || !containerRef.current) return;
+      inited = true;
 
-    const renderer = new THREE.WebGLRenderer({ canvas: canvasRef.current, antialias: true, alpha: true });
-    renderer.setSize(500, 500);
-    renderer.setClearColor(0x000000, 0);
+      scene = new THREE.Scene();
 
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-    scene.add(ambientLight);
+      const width = containerRef.current.clientWidth || 500;
+      const height = containerRef.current.clientHeight || 500;
+      camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 1000);
+      camera.position.set(0, 2, 4);
 
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-    directionalLight.position.set(5, 5, 5);
-    scene.add(directionalLight);
+      renderer = new THREE.WebGLRenderer({
+        canvas: canvasRef.current,
+        antialias: false,
+        alpha: true,
+        powerPreference: 'high-performance',
+      });
+      renderer.setSize(width, height, false);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+      renderer.setClearColor(0x000000, 0);
 
-    const loader = new GLTFLoader();
-    loader.load(
-      './anvil_-_bigorna (1).glb',
-      (gltf) => {
-        const model = gltf.scene;
-        model.scale.set(4, 4, 4);
-        model.position.set(0, 0, 0);
-        scene.add(model);
-        modelRef.current = model;
-        setLoading(false);
-      },
-      undefined,
-      (error) => {
-        console.error('Error loading GLB model:', error);
-        setLoading(false); 
-      }
-    );
+      const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+      scene.add(ambientLight);
+      const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
+      directionalLight.position.set(5, 5, 5);
+      scene.add(directionalLight);
 
-    const controls = new OrbitControls(camera, renderer.domElement);
-    controls.enableDamping = true;
-    controls.enableZoom = false;
+      const loader = new GLTFLoader();
+      loader.load(
+        './anvil_-_bigorna (1).glb',
+        (gltf) => {
+          if (!scene) return;
+          const model = gltf.scene;
+          model.scale.set(4, 4, 4);
+          model.position.set(0, 0, 0);
+          scene.add(model);
+          modelRef.current = model;
+          setLoading(false);
+        },
+        undefined,
+        (error) => {
+          console.error('Error loading GLB model:', error);
+          setLoading(false);
+        }
+      );
 
-    const animate = () => {
-      requestAnimationFrame(animate);
+      controls = new OrbitControls(camera, renderer.domElement);
+      controls.enableDamping = true;
+      controls.enableZoom = false;
 
-      if (modelRef.current) {
-        modelRef.current.rotation.y -= 0.005;
-      }
+      const onResize = () => {
+        if (!renderer || !camera || !containerRef.current) return;
+        const w = containerRef.current.clientWidth;
+        const h = containerRef.current.clientHeight;
+        camera.aspect = w / h;
+        camera.updateProjectionMatrix();
+        renderer.setSize(w, h, false);
+      };
+      window.addEventListener('resize', onResize);
 
-      controls.update();
-      renderer.render(scene, camera);
+      const animate = () => {
+        frameId = window.requestAnimationFrame(animate);
+        if (modelRef.current) {
+          modelRef.current.rotation.y -= 0.005;
+        }
+        controls?.update();
+        if (renderer && scene && camera) renderer.render(scene, camera);
+      };
+      animate();
+
+      // Cleanup on unmount
+      return () => {
+        window.removeEventListener('resize', onResize);
+      };
     };
 
-    animate();
+    // Defer initialization until visible to the user
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            init();
+          }
+        });
+      },
+      { root: null, threshold: 0.1 }
+    );
+
+    observer.observe(containerRef.current);
 
     return () => {
-      renderer.dispose();
+      observer.disconnect();
+      if (frameId) cancelAnimationFrame(frameId);
+      if (controls) controls.dispose();
+      if (renderer) {
+        renderer.dispose();
+      }
+      if (scene) {
+        scene.traverse((obj: any) => {
+          if (obj.isMesh) {
+            obj.geometry?.dispose?.();
+            if (obj.material?.dispose) obj.material.dispose();
+          }
+        });
+      }
+      modelRef.current = null;
     };
   }, []);
 
   return (
-    <div className="relative w-[500px] h-[500px]">
+    <div ref={containerRef} className="relative w-full h-full">
       {loading && (
        <img
        src="/Component 5.svg"

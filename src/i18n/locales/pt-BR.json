@@ -11,15 +11,162 @@
   },
   "home": {
     "title": {
-      "before": "Testes de",
-      "highlight": "API sem esforço",
-      "after": "para Desenvolvedores e Equipes"
+      "before": "Cliente",
+      "highlight": "HTTP/HTTPS Moderno",
+      "after": "para Desenvolvedores e Testadores"
     },
-    "description": "Acelere seu desenvolvimento com nossa poderosa plataforma de testes de API. Criado para eficiência, o LoadForge simplifica testes, depuração e otimização de APIs, garantindo integração perfeita e desempenho máximo.",
-    "button": "Começar agora"
+    "description": "Envie requisições, inspecione respostas e mantenha a produtividade com um cliente leve, rápido e acessível. Inspirado em ferramentas do mercado, feito para desempenho e usabilidade.",
+    "button": "Começar agora",
+    "viewFunctions": "Ver funções"
+  },
+  "buttons": {
+    "github": "GitHub"
+  },
+  "developers": {
+    "heading": "Desenvolvedores",
+    "subheading": "Conheça quem está por trás do projeto.",
+    "labels": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
+    }
   },
   "Home": "Início",
   "functions": "Funções",
   "about": "Sobre",
-  "docs": "Documentação"
+  "docs": "Documentação",
+  "features": {
+    "heading": "Recursos Poderosos",
+    "subheading": "Tudo o que você precisa para projetar, executar e analisar testes de API com confiança.",
+    "fast": { "title": "Configuração Rápida", "desc": "Crie testes em minutos com um fluxo intuitivo e modelos prontos." },
+    "scalable": { "title": "Execuções Escaláveis", "desc": "Execute desde pequenas verificações até cenários de carga pesada sob demanda." },
+    "insights": { "title": "Insights Acionáveis", "desc": "Métricas, gráficos e relatórios ricos para decisões informadas." }
+  },
+  "howItWorks": {
+    "heading": "Como Funciona",
+    "subheading": "Vá da ideia aos insights em três passos simples.",
+    "steps": {
+      "1": { "title": "Planejar", "desc": "Defina requisições, assertivas e ambientes em uma interface limpa." },
+      "2": { "title": "Executar", "desc": "Rode testes funcionais ou de performance localmente ou na nuvem." },
+      "3": { "title": "Analisar", "desc": "Explore resultados, identifique regressões e compartilhe relatórios." }
+    }
+  },
+  "pricing": {
+    "heading": "Preços Simples e Transparentes",
+    "subheading": "Comece grátis e escale conforme necessário.",
+    "popular": "Mais Popular",
+    "free": {
+      "name": "Grátis",
+      "price": "R$0",
+      "features": ["Projetos ilimitados", "Testes básicos de API", "Suporte da comunidade"],
+      "cta": "Começar"
+    },
+    "pro": {
+      "name": "Pro",
+      "price": "R$99",
+      "features": ["Assertivas avançadas", "Execuções de performance", "Suporte prioritário"],
+      "cta": "Assinar Pro"
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "price": "Sob consulta",
+      "features": ["SSO e segurança", "Limites personalizados", "Sucesso dedicado"],
+      "cta": "Falar com Vendas"
+    }
+  },
+  "testimonials": {
+    "heading": "Amado por equipes",
+    "subheading": "Veja o que desenvolvedores dizem sobre o LoadForge.",
+    "items": [
+      { "quote": "A configuração foi simples e os insights, imediatos.", "author": "A. Silva", "role": "Engenheiro Backend" },
+      { "quote": "Detectamos gargalos de performance antes do lançamento.", "author": "M. Torres", "role": "Líder Técnico" },
+      { "quote": "Ótima experiência de desenvolvedor e interface limpa.", "author": "K. Lee", "role": "Dev Fullstack" }
+    ]
+  },
+  "faq": {
+    "heading": "Perguntas Frequentes",
+    "subheading": "Respostas para dúvidas comuns sobre o LoadForge.",
+    "items": [
+      { "q": "Posso usar o plano Grátis em produção?", "a": "Sim, o plano Grátis é ótimo para começar. Para uso mais intenso, recomendamos Pro ou Enterprise." },
+      { "q": "Vocês oferecem contas para equipes?", "a": "Sim, os planos Pro e Enterprise incluem colaboração e suporte prioritário." },
+      { "q": "Existe opção on‑premise?", "a": "Planos Enterprise podem ser personalizados, incluindo on‑premise e SSO." }
+    ]
+  },
+  "cta": {
+    "heading": "Pronto para acelerar seus testes de API?",
+    "subheading": "Junte-se aos desenvolvedores que entregam APIs confiáveis mais rápido com o LoadForge.",
+    "button": "Começar agora"
+  },
+  "footer": {
+    "tagline": "Feito para performance, confiabilidade e felicidade do desenvolvedor.",
+    "rights": "Todos os direitos reservados."
+  }
+  ,
+  "functionsSection": {
+    "heading": "Funções",
+    "subheading": "Simule carga real em APIs: projete cenários, execute testes e analise resultados com clareza.",
+    "cards": {
+      "interface": {
+        "title": "Cenários de Carga",
+        "items": [
+          "Crie coleções e fluxos de requisições",
+          "Defina ramp‑up, duração e usuários virtuais",
+          "Use variáveis e ambientes para parametrização"
+        ]
+      },
+      "client": {
+        "title": "Execução e Perfis",
+        "items": [
+          "Métodos GET, POST, PUT, DELETE e outros",
+          "Perfis de carga: constante, picos e degraus",
+          "Limites de taxa e concorrência configuráveis"
+        ]
+      },
+      "management": {
+        "title": "Assertivas e Qualidade",
+        "items": [
+          "Valide status code, headers e corpo",
+          "Regras de aprovação por percentis (p95/p99)",
+          "Detecção de erros e tempos limite"
+        ]
+      },
+      "viewer": {
+        "title": "Métricas e Relatórios",
+        "items": [
+          "Latência, throughput e taxa de erro",
+          "Distribuições e percentis por requisição",
+          "Exportação e compartilhamento de resultados"
+        ]
+      }
+    }
+  },
+  "aboutSection": {
+    "heading": "Sobre o LoadForge",
+    "p1": "LoadForge é um projeto que está sendo desenvolvido como parte do Trabalho de Conclusão de Curso (TCC) da FATEC Zona Sul. Trata-se de um cliente HTTP voltado para desenvolvedores e testadores, com o objetivo de facilitar a realização de requisições HTTP para diferentes fins, como testes de APIs, simulações de carga e verificação de respostas dos servidores.",
+    "p2": "Inspirado em ferramentas amplamente utilizadas como Postman e Insomnia, o LoadForge busca oferecer uma experiência semelhante, porém com diferenciais específicos, como foco em leveza, desempenho e usabilidade. A ferramenta permitirá ao usuário enviar requisições dos tipos GET, POST, PUT, DELETE, entre outras, além de visualizar as respostas em diferentes formatos (JSON, texto, HTML), com detalhes como status code, headers e tempo de resposta.",
+    "p3": "Um dos principais diferenciais do projeto é o uso da linguagem Rust no backend. A escolha do Rust se deu por sua alta performance, segurança de memória e excelente suporte à programação concorrente (multi-threading), características ideais para aplicações que precisam lidar com grande volume de requisições simultâneas, como testes de carga. Isso torna o LoadForge especialmente eficiente em simular cenários reais de estresse em servidores e APIs, permitindo uma análise mais precisa do comportamento dos sistemas.",
+    "overview": {
+      "title": "Visão Geral",
+      "items": [
+        "Envio de requisições HTTP/HTTPS (GET, POST, PUT, DELETE)",
+        "Organização em coleções e histórico de chamadas",
+        "Visualização das respostas (JSON, texto, HTML)"
+      ]
+    },
+    "tech": {
+      "title": "Foco em Carga",
+      "items": [
+        "Perfis de usuários virtuais e ramp‑up",
+        "Assertivas por percentis e limites",
+        "Métricas de latência, throughput e erros"
+      ]
+    },
+    "inDev": {
+      "title": "Em Desenvolvimento",
+      "items": [
+        "Agendamento de execuções",
+        "Relatórios comparativos",
+        "Compartilhamento de resultados"
+      ]
+    }
+  }
 }

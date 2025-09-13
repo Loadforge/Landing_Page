@@ -2,6 +2,10 @@
 
 import I18nProvider from "@/components/i18nProvider";
 import Home from "@/components/sections/Home";
+import Footer from "@/components/sections/Footer";
+import About from "@/components/sections/About";
+import Functions from "@/components/sections/Functions";
+import Developers from "@/components/sections/Developers";
 import useThemeStore from "@/store/theme.store";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -47,8 +51,11 @@ export default function Page() {
   return (
     <div className="flex flex-col">
       <I18nProvider>
-        {" "}
         <Home />
+        <Functions />
+        <About />
+        <Developers />
+        <Footer />
       </I18nProvider>
     </div>
   );
