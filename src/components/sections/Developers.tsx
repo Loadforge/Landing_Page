@@ -31,7 +31,10 @@ export default function Developers() {
   const { t } = useTranslation();
 
   return (
-    <section id="developers" className="py-24 px-6 md:px-16 bg-[var(--background_home)]/20">
+    <section
+      id="developers"
+      className="py-24 px-6 md:px-16 bg-[var(--background_home)]/20"
+    >
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-5xl font-extrabold text-text text-center">
           {t("developers.heading")}
@@ -40,14 +43,14 @@ export default function Developers() {
           {t("developers.subheading")}
         </p>
 
-        <div className="grid gap-6 md:gap-8 mt-12 md:grid-cols-2">
+        <div className="grid gap-8 mt-12 md:grid-cols-2">
           {developers.map((dev) => (
             <article
               key={dev.github}
-              className="group p-6 rounded-xl border border-[var(--separators)]/30 bg-card shadow-sm hover:shadow-md transition-shadow"
+              className="group p-6 rounded-2xl border border-[var(--separators)]/30 bg-card shadow-sm hover:shadow-lg transition-shadow"
             >
               <div className="flex items-center gap-5">
-                <div className="relative h-16 w-16 rounded-full overflow-hidden border border-[var(--separators)]/30 bg-muted/40">
+                <div className="relative h-20 w-20 rounded-full overflow-hidden border border-[var(--separators)]/30 bg-muted/40">
                   {dev.image ? (
                     <img
                       src={dev.image}
@@ -57,31 +60,43 @@ export default function Developers() {
                       decoding="async"
                     />
                   ) : (
-                    <div className="h-full w-full grid place-items-center text-muted-foreground text-lg">{dev.name.charAt(0)}</div>
+                    <div className="h-full w-full grid place-items-center text-muted-foreground text-lg font-semibold">
+                      {dev.name.charAt(0)}
+                    </div>
                   )}
                 </div>
+
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-text">{dev.name}</h3>
+                  <h3 className="text-xl font-semibold text-text">
+                    {dev.name}
+                  </h3>
                   <p className="text-sm text-muted-foreground">{dev.role}</p>
                 </div>
-                <div className="flex items-center gap-3">
+
+                <div className="flex flex-col sm:flex-row gap-3">
                   <a
                     href={dev.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-md border border-[var(--separators)]/30 px-3 py-2 text-sm text-text hover:bg-card/60 transition-colors"
+                    className="inline-flex items-center gap-2 rounded-lg border border-[var(--separators)]/30 px-3 py-2 text-sm font-medium text-text hover:bg-card/60 transition-colors"
                     aria-label={`${dev.name} GitHub`}
                   >
-                    <FaGithub className="h-4 w-4" /> {t("developers.labels.github")}
+                    <FaGithub className="h-4 w-4" />{" "}
+                    <span className="hidden sm:inline">
+                      {t("developers.labels.github")}
+                    </span>
                   </a>
                   <a
                     href={dev.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-md border border-[var(--separators)]/30 px-3 py-2 text-sm text-text hover:bg-card/60 transition-colors"
+                    className="inline-flex items-center gap-2 rounded-lg border border-[var(--separators)]/30 px-3 py-2 text-sm font-medium text-text hover:bg-card/60 transition-colors"
                     aria-label={`${dev.name} LinkedIn`}
                   >
-                    <FaLinkedin className="h-4 w-4" /> {t("developers.labels.linkedin")}
+                    <FaLinkedin className="h-4 w-4" />{" "}
+                    <span className="hidden sm:inline">
+                      {t("developers.labels.linkedin")}
+                    </span>
                   </a>
                 </div>
               </div>
