@@ -12,18 +12,18 @@ type Dev = {
 
 const developers: Dev[] = [
   {
-    name: "Developer 1",
+    name: "Jean Lima",
     role: "Full Stack",
-    github: "https://github.com/your-github-1",
-    linkedin: "https://www.linkedin.com/in/your-linkedin-1/",
-    image: "/Logo.svg",
+    github: "https://github.com/JeanLima2112",
+    linkedin: "https://www.linkedin.com/in/ojeanlima/",
+    image: "/devs/jean.png",
   },
   {
-    name: "Developer 2",
+    name: "Danillo Leal",
     role: "Full Stack",
-    github: "https://github.com/your-github-2",
-    linkedin: "https://www.linkedin.com/in/your-linkedin-2/",
-    image: "/Logo_black.svg",
+    github: "https://github.com/danilloyal",
+    linkedin: "https://www.linkedin.com/in/danillomartinsleal/",
+    image: "/devs/danillo.png",
   },
 ];
 
