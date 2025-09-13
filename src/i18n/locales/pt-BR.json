@@ -37,17 +37,35 @@
   "features": {
     "heading": "Recursos Poderosos",
     "subheading": "Tudo o que você precisa para projetar, executar e analisar testes de API com confiança.",
-    "fast": { "title": "Configuração Rápida", "desc": "Crie testes em minutos com um fluxo intuitivo e modelos prontos." },
-    "scalable": { "title": "Execuções Escaláveis", "desc": "Execute desde pequenas verificações até cenários de carga pesada sob demanda." },
-    "insights": { "title": "Insights Acionáveis", "desc": "Métricas, gráficos e relatórios ricos para decisões informadas." }
+    "fast": {
+      "title": "Configuração Rápida",
+      "desc": "Crie testes em minutos com um fluxo intuitivo e modelos prontos."
+    },
+    "scalable": {
+      "title": "Execuções Escaláveis",
+      "desc": "Execute desde pequenas verificações até cenários de carga pesada sob demanda."
+    },
+    "insights": {
+      "title": "Insights Acionáveis",
+      "desc": "Métricas, gráficos e relatórios ricos para decisões informadas."
+    }
   },
   "howItWorks": {
     "heading": "Como Funciona",
     "subheading": "Vá da ideia aos insights em três passos simples.",
     "steps": {
-      "1": { "title": "Planejar", "desc": "Defina requisições, assertivas e ambientes em uma interface limpa." },
-      "2": { "title": "Executar", "desc": "Rode testes funcionais ou de performance localmente ou na nuvem." },
-      "3": { "title": "Analisar", "desc": "Explore resultados, identifique regressões e compartilhe relatórios." }
+      "1": {
+        "title": "Planejar",
+        "desc": "Defina requisições, assertivas e ambientes em uma interface limpa."
+      },
+      "2": {
+        "title": "Executar",
+        "desc": "Rode testes funcionais ou de performance localmente ou na nuvem."
+      },
+      "3": {
+        "title": "Analisar",
+        "desc": "Explore resultados, identifique regressões e compartilhe relatórios."
+      }
     }
   },
   "pricing": {
@@ -57,19 +75,31 @@
     "free": {
       "name": "Grátis",
       "price": "R$0",
-      "features": ["Projetos ilimitados", "Testes básicos de API", "Suporte da comunidade"],
+      "features": [
+        "Projetos ilimitados",
+        "Testes básicos de API",
+        "Suporte da comunidade"
+      ],
       "cta": "Começar"
     },
     "pro": {
       "name": "Pro",
       "price": "R$99",
-      "features": ["Assertivas avançadas", "Execuções de performance", "Suporte prioritário"],
+      "features": [
+        "Assertivas avançadas",
+        "Execuções de performance",
+        "Suporte prioritário"
+      ],
       "cta": "Assinar Pro"
     },
     "enterprise": {
       "name": "Enterprise",
       "price": "Sob consulta",
-      "features": ["SSO e segurança", "Limites personalizados", "Sucesso dedicado"],
+      "features": [
+        "SSO e segurança",
+        "Limites personalizados",
+        "Sucesso dedicado"
+      ],
       "cta": "Falar com Vendas"
     }
   },
@@ -77,18 +107,39 @@
     "heading": "Amado por equipes",
     "subheading": "Veja o que desenvolvedores dizem sobre o LoadForge.",
     "items": [
-      { "quote": "A configuração foi simples e os insights, imediatos.", "author": "A. Silva", "role": "Engenheiro Backend" },
-      { "quote": "Detectamos gargalos de performance antes do lançamento.", "author": "M. Torres", "role": "Líder Técnico" },
-      { "quote": "Ótima experiência de desenvolvedor e interface limpa.", "author": "K. Lee", "role": "Dev Fullstack" }
+      {
+        "quote": "A configuração foi simples e os insights, imediatos.",
+        "author": "A. Silva",
+        "role": "Engenheiro Backend"
+      },
+      {
+        "quote": "Detectamos gargalos de performance antes do lançamento.",
+        "author": "M. Torres",
+        "role": "Líder Técnico"
+      },
+      {
+        "quote": "Ótima experiência de desenvolvedor e interface limpa.",
+        "author": "K. Lee",
+        "role": "Dev Fullstack"
+      }
     ]
   },
   "faq": {
     "heading": "Perguntas Frequentes",
     "subheading": "Respostas para dúvidas comuns sobre o LoadForge.",
     "items": [
-      { "q": "Posso usar o plano Grátis em produção?", "a": "Sim, o plano Grátis é ótimo para começar. Para uso mais intenso, recomendamos Pro ou Enterprise." },
-      { "q": "Vocês oferecem contas para equipes?", "a": "Sim, os planos Pro e Enterprise incluem colaboração e suporte prioritário." },
-      { "q": "Existe opção on‑premise?", "a": "Planos Enterprise podem ser personalizados, incluindo on‑premise e SSO." }
+      {
+        "q": "Posso usar o plano Grátis em produção?",
+        "a": "Sim, o plano Grátis é ótimo para começar. Para uso mais intenso, recomendamos Pro ou Enterprise."
+      },
+      {
+        "q": "Vocês oferecem contas para equipes?",
+        "a": "Sim, os planos Pro e Enterprise incluem colaboração e suporte prioritário."
+      },
+      {
+        "q": "Existe opção on‑premise?",
+        "a": "Planos Enterprise podem ser personalizados, incluindo on‑premise e SSO."
+      }
     ]
   },
   "cta": {
@@ -99,8 +150,7 @@
   "footer": {
     "tagline": "Feito para performance, confiabilidade e felicidade do desenvolvedor.",
     "rights": "Todos os direitos reservados."
-  }
-  ,
+  },
   "functionsSection": {
     "heading": "Funções",
     "subheading": "Simule carga real em APIs: projete cenários, execute testes e analise resultados com clareza.",
@@ -143,30 +193,6 @@
     "heading": "Sobre o LoadForge",
     "p1": "LoadForge é um projeto que está sendo desenvolvido como parte do Trabalho de Conclusão de Curso (TCC) da FATEC Zona Sul. Trata-se de um cliente HTTP voltado para desenvolvedores e testadores, com o objetivo de facilitar a realização de requisições HTTP para diferentes fins, como testes de APIs, simulações de carga e verificação de respostas dos servidores.",
     "p2": "Inspirado em ferramentas amplamente utilizadas como Postman e Insomnia, o LoadForge busca oferecer uma experiência semelhante, porém com diferenciais específicos, como foco em leveza, desempenho e usabilidade. A ferramenta permitirá ao usuário enviar requisições dos tipos GET, POST, PUT, DELETE, entre outras, além de visualizar as respostas em diferentes formatos (JSON, texto, HTML), com detalhes como status code, headers e tempo de resposta.",
-    "p3": "Um dos principais diferenciais do projeto é o uso da linguagem Rust no backend. A escolha do Rust se deu por sua alta performance, segurança de memória e excelente suporte à programação concorrente (multi-threading), características ideais para aplicações que precisam lidar com grande volume de requisições simultâneas, como testes de carga. Isso torna o LoadForge especialmente eficiente em simular cenários reais de estresse em servidores e APIs, permitindo uma análise mais precisa do comportamento dos sistemas.",
-    "overview": {
-      "title": "Visão Geral",
-      "items": [
-        "Envio de requisições HTTP/HTTPS (GET, POST, PUT, DELETE)",
-        "Organização em coleções e histórico de chamadas",
-        "Visualização das respostas (JSON, texto, HTML)"
-      ]
-    },
-    "tech": {
-      "title": "Foco em Carga",
-      "items": [
-        "Perfis de usuários virtuais e ramp‑up",
-        "Assertivas por percentis e limites",
-        "Métricas de latência, throughput e erros"
-      ]
-    },
-    "inDev": {
-      "title": "Em Desenvolvimento",
-      "items": [
-        "Agendamento de execuções",
-        "Relatórios comparativos",
-        "Compartilhamento de resultados"
-      ]
-    }
+    "p3": "Um dos principais diferenciais do projeto é o uso da linguagem Rust no backend. A escolha do Rust se deu por sua alta performance, segurança de memória e excelente suporte à programação concorrente (multi-threading), características ideais para aplicações que precisam lidar com grande volume de requisições simultâneas, como testes de carga. Isso torna o LoadForge especialmente eficiente em simular cenários reais de estresse em servidores e APIs, permitindo uma análise mais precisa do comportamento dos sistemas."
   }
 }
