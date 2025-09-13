@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <section id="home" className="relative min-h-screen flex items-center">
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[var(--background_home)]/60 via-transparent to-[var(--background)]" />
-      <div className="absolute inset-0 -z-20 opacity-20 pointer-events-none select-none">
+      <div className="absolute inset-0 -z-20 opacity-50 pointer-events-none select-none">
         <img
           src="/background.svg"
           alt=""

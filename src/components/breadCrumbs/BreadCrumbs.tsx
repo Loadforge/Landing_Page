@@ -7,7 +7,7 @@ export default function BreadCrumbs() {
   const { t } = useTranslation();
 
   return (
-    <Breadcrumb className="flex w-full justify-center text-sm text-text space-x-4 lg:space-x-6 text-lg  ">
+    <Breadcrumb className="flex w-full justify-center text-sm text-text space-x-4 xl:space-x-12 xl:text-lg ">
       <BreadcrumbItem>
         <BreadcrumbLink href="#home">{t("Home")}</BreadcrumbLink>
       </BreadcrumbItem>
@@ -24,7 +24,7 @@ export default function BreadCrumbs() {
       </BreadcrumbItem>
       <BreadcrumbItem>
         <BreadcrumbLink
-          href="https://example.com/docs"
+          href="https://github.com/Loadforge/docs"
           className="flex"
           target="_blank"
           rel="noopener noreferrer"
