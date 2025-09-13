@@ -155,37 +155,21 @@
     "heading": "Funções",
     "subheading": "Simule carga real em APIs: projete cenários, execute testes e analise resultados com clareza.",
     "cards": {
-      "interface": {
-        "title": "Cenários de Carga",
-        "items": [
-          "Crie coleções e fluxos de requisições",
-          "Defina ramp‑up, duração e usuários virtuais",
-          "Use variáveis e ambientes para parametrização"
-        ]
+      "simple": {
+        "title": "Requisições Simples",
+        "desc": "Envie requisições HTTP rapidamente e inspecione status, headers e corpo com facilidade."
       },
-      "client": {
-        "title": "Execução e Perfis",
-        "items": [
-          "Métodos GET, POST, PUT, DELETE e outros",
-          "Perfis de carga: constante, picos e degraus",
-          "Limites de taxa e concorrência configuráveis"
-        ]
+      "load": {
+        "title": "Teste de Carga",
+        "desc": "Defina VUs e perfis para simular tráfego e validar thresholds de performance."
       },
-      "management": {
-        "title": "Assertivas e Qualidade",
-        "items": [
-          "Valide status code, headers e corpo",
-          "Regras de aprovação por percentis (p95/p99)",
-          "Detecção de erros e tempos limite"
-        ]
+      "share": {
+        "title": "Compartilhar Projetos",
+        "desc": "Colabore com sua equipe compartilhando coleções, ambientes e resultados."
       },
-      "viewer": {
+      "reports": {
         "title": "Métricas e Relatórios",
-        "items": [
-          "Latência, throughput e taxa de erro",
-          "Distribuições e percentis por requisição",
-          "Exportação e compartilhamento de resultados"
-        ]
+        "desc": "Veja latência, throughput e erros e exporte relatórios para compartilhar insights."
       }
     }
   },

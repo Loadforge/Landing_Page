@@ -36,7 +36,7 @@ export default function Developers() {
       className="py-24 px-6 md:px-16 bg-[var(--background_home)]/20"
     >
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-5xl font-extrabold text-text text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-text">
           {t("developers.heading")}
         </h2>
         <p className="text-center mt-3 max-w-3xl mx-auto text-muted-foreground">
@@ -47,7 +47,7 @@ export default function Developers() {
           {developers.map((dev) => (
             <article
               key={dev.github}
-              className="group p-6 rounded-2xl border border-[var(--separators)]/30 bg-card shadow-sm hover:shadow-lg transition-shadow"
+              className="group p-6 rounded-2xl border border-[var(--separators)]/30 bg-card shadow-sm transition-all hover:shadow-lg hover:-translate-y-1 hover:border-[var(--primary)]/30"
             >
               <div className="flex items-center gap-5">
                 <div className="relative h-20 w-20 rounded-full overflow-hidden border border-[var(--separators)]/30 bg-muted/40">

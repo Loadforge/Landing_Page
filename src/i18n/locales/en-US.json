@@ -151,37 +151,21 @@
     "heading": "Functions",
     "subheading": "Simulate real API load: design scenarios, run tests, and analyze results with clarity.",
     "cards": {
-      "interface": {
-        "title": "Load Scenarios",
-        "items": [
-          "Create collections and request flows",
-          "Set ramp‑up, duration and virtual users",
-          "Use environments and variables for parametrization"
-        ]
+      "simple": {
+        "title": "Simple Requests",
+        "desc": "Send HTTP requests quickly and inspect status, headers and body with ease."
       },
-      "client": {
-        "title": "Execution & Profiles",
-        "items": [
-          "HTTP methods: GET, POST, PUT, DELETE and more",
-          "Load profiles: constant, spikes and steps",
-          "Configurable rate limits and concurrency"
-        ]
+      "load": {
+        "title": "Load Testing",
+        "desc": "Define VUs and profiles to simulate traffic and validate performance thresholds."
       },
-      "management": {
-        "title": "Assertions & Quality",
-        "items": [
-          "Validate status code, headers and body",
-          "Pass/fail rules using percentiles (p95/p99)",
-          "Error and timeout detection"
-        ]
+      "share": {
+        "title": "Share Projects",
+        "desc": "Collaborate with your team by sharing collections, environments and results."
       },
-      "viewer": {
+      "reports": {
         "title": "Metrics & Reports",
-        "items": [
-          "Latency, throughput and error rate",
-          "Distributions and percentiles per request",
-          "Export and share results"
-        ]
+        "desc": "View latency, throughput and errors, and export reports to share insights."
       }
     }
   },

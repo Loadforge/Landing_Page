@@ -44,9 +44,6 @@ export default function About() {
       </div>
 
       <div className="relative max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-5xl font-extrabold text-text">
-          {t("aboutSection.heading")}
-        </h2>
         <p className="text-muted-foreground mt-6 leading-relaxed text-lg">
           {t("aboutSection.p1")}
         </p>
